@@ -11,4 +11,6 @@
 alert(person instanceof Object); // 变量 person 是 Object 吗？
 alert(colors instanceof Array); // 变量 colors 是 Array 吗？
 alert(pattern instanceof RegExp); // 变量 pattern 是 RegExp 吗？
+(Array.isArray(value)) //判断是否是数组
+
 ```
