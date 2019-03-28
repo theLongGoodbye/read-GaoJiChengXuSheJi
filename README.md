@@ -28,3 +28,11 @@ function factorial(num){
  } 
 } 
 ```
+```
+字符串转数组
+var colorText = "red,blue,green,yellow"; 
+
+colorText.split() -> ["red,blue,green,yellow"]
+
+colorText.split(',') -> ["red", "blue", "green", "yellow"]
+```
