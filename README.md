@@ -36,3 +36,7 @@ colorText.split() -> ["red,blue,green,yellow"]
 
 colorText.split(',') -> ["red", "blue", "green", "yellow"]
 ```
+
+```
+理解原型对象
+```
