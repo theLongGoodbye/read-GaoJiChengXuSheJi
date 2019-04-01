@@ -82,4 +82,10 @@ function createComparisonFunction(propertyName) {
   } 
   }; 
 } 
+在匿名函数从 createComparisonFunction()中被返回后，它的作用域链被初始化为包含
+createComparisonFunction()函数的活动对象和全局变量对象。这样，匿名函数就可以访问在
+createComparisonFunction()中定义的所有变量。更为重要的是，createComparisonFunction()
+函数在执行完毕后，其活动对象也不会被销毁，因为匿名函数的作用域链仍然在引用这个活动对象。换
+句话说，当 createComparisonFunction()函数返回后，其执行环境的作用域链会被销毁，但它的活
+动对象仍然会留在内存中
 ```
