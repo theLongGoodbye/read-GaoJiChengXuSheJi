@@ -89,3 +89,32 @@ createComparisonFunction()中定义的所有变量。更为重要的是，create
 句话说，当 createComparisonFunction()函数返回后，其执行环境的作用域链会被销毁，但它的活
 动对象仍然会留在内存中
 ```
+```
+间歇调用和超时调用： 
+var num = 0; 
+var max = 10; 
+var intervalId = null; 
+function incrementNumber() { 
+   num++; 
+   //如果执行次数达到了 max 设定的值，则取消后续尚未执行的调用
+   if (num == max) { 
+     clearInterval(intervalId); 
+     alert("Done"); 
+   } 
+  } 
+intervalId = setInterval(incrementNumber, 500); 
+----
+function incrementNumber() { 
+ num++; 
+ //如果执行次数未达到 max 设定的值，则设置另一次超时调用
+ if (num < max) { 
+ setTimeout(incrementNumber, 500); 
+ } else { 
+ alert("Done"); 
+ } 
+} 
+setTimeout(incrementNumber, 500); 
+一般认为，使用超时调用来模拟间歇调用的是一种最佳模式。在开
+发环境下，很少使用真正的间歇调用，原因是后一个间歇调用可能会在前一个间歇调用结束之前启动。
+而像前面示例中那样使用超时调用，则完全可以避免这一点。所以，最好不要使用间歇调用。
+```
