@@ -48,3 +48,38 @@ colorText.split(',') -> ["red", "blue", "green", "yellow"]
 问：“person1 的原型有 sayName 属性吗？”答：“有。”于是，它就读取那个保存在原型对象中的函数。当我们调用 person2.sayName()时，将会重现相同的搜索过程，得到相同的结果。而这正是多个对象实例共享原型所保存的属性和方法的基本原理
 ```
 对象的 in 操作符：`a = {name: 'green'}` 'name' in a // true
+
+```
+ES5 创建对象：工厂模式 -> 构造函数模式 -> 原型模式 -> 组合使用构造函数模式（属性）和原型模式（方法）， 使用最广泛、认同度最高
+```
+```
+ES5 实现继承：原型链（将父类的实例赋值给子类的原型） -> 借用构造函数（在子类中用 call 方法调用父类构造函数） -> 组合继承，在子类中用 call 方法调用父类构造函数，以继承属性；将父类的实例赋值给子类的原型，以继承方法
+```
+```
+递归：一个函数通过名字调用自己
+function factorial(num){ 
+  if (num <= 1){ 
+   return 1; 
+  } else { 
+   return num * arguments.callee(num-1); 
+  } 
+} 
+```
+
+```
+闭包：是指一个函数有权访问另一个函数作用域中的变量
+function createComparisonFunction(propertyName) { 
+  return function(object1, object2){ 
+  var value1 = object1[propertyName]; 
+  var value2 = object2[propertyName]; 
+
+  if (value1 < value2){ 
+   return -1; 
+  } else if (value1 > value2){ 
+   return 1; 
+  } else { 
+   return 0; 
+  } 
+  }; 
+} 
+```
