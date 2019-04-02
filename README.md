@@ -136,4 +136,9 @@ var myName = div.dataset.myname;
 //设置值
 div.dataset.appId = 23456; 
 div.dataset.myname = "Michael"; 
+
+innerHTML
+
+//作为最后一个子元素插入
+element.insertAdjacentHTML("beforeend", "<p>Hello world!</p>"); 
 ```
