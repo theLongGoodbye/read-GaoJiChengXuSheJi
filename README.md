@@ -118,3 +118,22 @@ setTimeout(incrementNumber, 500);
 发环境下，很少使用真正的间歇调用，原因是后一个间歇调用可能会在前一个间歇调用结束之前启动。
 而像前面示例中那样使用超时调用，则完全可以避免这一点。所以，最好不要使用间歇调用。
 ```
+```
+DOM1 级将 HTML 和 XML 文档看作一个层次化的节点树
+可以使用 JS 来操作这个节点树，进而改变底层文档的外观和结构。
+DOM 操作往往是 JS 程序中开销最大的部分，应尽量减少
+```
+#### HTML5新特性
+```
+操作 DOM 的部分： querySelector()、querySelectorAll()、 classList
+document.activeElement 属性始终会引用 DOM 中当前获得了焦点的元素
+
+使用 data- 为元素添加非标准的属性
+<div id="myDiv" data-appId="12345" data-myname="Nicholas"></div> 
+//取得自定义属性的值
+var appId = div.dataset.appId; 
+var myName = div.dataset.myname; 
+//设置值
+div.dataset.appId = 23456; 
+div.dataset.myname = "Michael"; 
+```
