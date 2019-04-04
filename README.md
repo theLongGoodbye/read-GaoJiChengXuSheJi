@@ -142,3 +142,14 @@ innerHTML
 //作为最后一个子元素插入
 element.insertAdjacentHTML("beforeend", "<p>Hello world!</p>"); 
 ```
+```
+DOM0 级事件：将一个函数赋值给一个事件处理程序属性
+var btn = document.getElementById("myBtn"); 
+btn.onclick = function(){ 
+ alert("Clicked"); 
+}; 
+```
+```
+DOM2级事件 定义了两个方法，addEventListener() 和 removeEventListener()
+使用 事件冒泡， 可以最大限度地兼容各种浏览器
+```
