@@ -157,3 +157,18 @@ DOM2级事件 定义了两个方法，addEventListener() 和 removeEventListener
 JSON 对象有两个方法：stringify()和 parse()。在最简单的情况下，这两个方法分别用于把
 JavaScript 对象序列化为 JSON 字符串和把 JSON 字符串解析为原生 JavaScript 值。
 ```
+```
+状态代码为 304 表示请求的资源并没有被修改，可
+以直接使用浏览器中缓存的版本；当然，也意味着响应是有效的。
+```
+```
+CORS 背后的基本思想，就是使用自定义的 HTTP 头部
+让浏览器与服务器进行沟通，从而决定请求或响应是应该成功，还是应该失败。
+Origin: http://www.nczonline.net
+Access-Control-Allow-Origin: http://www.nczonline.net
+```
+```
+var self = this;
+由于 setTimeout()中用到的函数的环境总是 window，所以有
+必要保存 this 的引用以方便以后使用。
+```
