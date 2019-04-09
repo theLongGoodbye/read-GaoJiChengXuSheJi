@@ -153,3 +153,7 @@ btn.onclick = function(){
 DOM2级事件 定义了两个方法，addEventListener() 和 removeEventListener()
 使用 事件冒泡， 可以最大限度地兼容各种浏览器
 ```
+```
+JSON 对象有两个方法：stringify()和 parse()。在最简单的情况下，这两个方法分别用于把
+JavaScript 对象序列化为 JSON 字符串和把 JSON 字符串解析为原生 JavaScript 值。
+```
