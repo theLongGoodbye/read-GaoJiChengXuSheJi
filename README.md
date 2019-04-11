@@ -172,3 +172,10 @@ var self = this;
 由于 setTimeout()中用到的函数的环境总是 window，所以有
 必要保存 this 的引用以方便以后使用。
 ```
+sessionStorage 对象存储特定于某个会话的数据，也就是该数据只保持到**浏览器关闭**
+
+要访问同一个 localStorage 对象，页面必须来自同一个域名（子域名无效），使用同一种
+协议，在同一个端口上。<br>
+
+对于 localStorage 而言，大多数桌面浏览器会设置每个来源 5MB 的限制。Chrome 和 Safari 对每
+个来源的限制是 2.5MB。而 iOS 版 Safari 和 Android 版 WebKit 的限制也是 2.5MB。
