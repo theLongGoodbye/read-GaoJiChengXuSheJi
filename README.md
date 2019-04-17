@@ -17,7 +17,8 @@ alert(pattern instanceof RegExp); // 变量 pattern 是 RegExp 吗？
 
 
 ```
-在函数内部，有两个特殊的对象：arguments 和 this。其中，arguments 在第 3 章曾经介绍过，
+在函数内部，有两个特殊的对象：arguments 和 this。this
+引用的是函数据以执行的环境对象，而arguments 在第 3 章曾经介绍过，
 它是一个类数组对象，包含着传入函数中的所有参数。虽然 arguments 的主要用途是保存函数参数，
 但这个对象还有一个名叫 callee 的属性，该属性是一个指针，指向拥有这个 arguments 对象的函数。
 function factorial(num){ 
